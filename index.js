@@ -54,3 +54,11 @@ const creactEli = (canvas) =>  {
     canvas.renderAll();
 }
 
+const svgCo = ( ) => {
+    const SVG = canvas.toSVG()
+    const anchor = document.createElement('a')
+    anchor.href = 'data:attachment/text,' + encodeURI(SVG.toString());
+    anchor.download = 'lol.svg'
+    anchor.click()
+};
+
